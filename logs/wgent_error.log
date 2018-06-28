@@ -1,0 +1,124 @@
+2018/01/05 13:24:05 [error] 1266#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  array_column() expects parameter 1 to be array, boolean given in /usr/local/var/www/promotion-v5/app/Business/Admin/ShopBusiness.php on line 30
+PHP message: PHP Warning:  array_fill_keys() expects parameter 1 to be array, null given in /usr/local/var/www/promotion-v5/app/Business/Admin/ShopBusiness.php on line 30" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/shop/list HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/05 13:24:13 [error] 1266#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Phalcon\Mvc\Model\Resultset\Simple::save() in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php:115
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(19): Models\PromotionShopModel->updatePromotionInfo(1, Array)
+#1 [internal function]: Controllers\Admin\GoodsController->listAction()
+#2 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'listAction', Array)
+#3 [internal function]: Phalcon\Dispatcher->_dispatch()
+#4 [internal function]: Phalcon\Dispatcher->dispatch()
+#5 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#6 /usr/local/var/www/promotion-v5/public/index.php(20): Core\bootstrap::runApplication()
+#7 {main}
+  thrown in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 115" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/goods/list HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/05 13:25:48 [error] 1266#0: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Attempt to assign property of non-object in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Attempt to assign property of non-object in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Creating default object from empty value in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Attempt to assign property of non-object in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 110
+PHP message: PHP Warning:  Attempt to assign p
+2018/01/05 13:28:07 [error] 1266#0: *6 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Phalcon\Mvc\Model\Resultset\Simple::save() in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php:115
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(19): Models\PromotionShopModel->updatePromotionInfo(1, Array)
+#1 [internal function]: Controllers\Admin\GoodsController->listAction()
+#2 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'listAction', Array)
+#3 [internal function]: Phalcon\Dispatcher->_dispatch()
+#4 [internal function]: Phalcon\Dispatcher->dispatch()
+#5 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#6 /usr/local/var/www/promotion-v5/public/index.php(20): Core\bootstrap::runApplication()
+#7 {main}
+  thrown in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 115" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/goods/list HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/09 15:32:50 [error] 1698#0: *22 FastCGI sent in stderr: "PHP message: PHP Warning:  array_column() expects parameter 1 to be array, boolean given in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 25
+PHP message: PHP Warning:  array_fill_keys() expects parameter 1 to be array, null given in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 25" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/shop/list?promotion_id=1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/10 14:21:10 [error] 952#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Core\Tools\MyRedis::del() in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php:263
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php(193): Models\PromotionShopModel->delCache(2)
+#1 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(57): Business\ShopBusiness->confirmJoin(1, 2)
+#2 [internal function]: Controllers\Admin\GoodsController->testAction()
+#3 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'testAction', Array)
+#4 [internal function]: Phalcon\Dispatcher->_dispatch()
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#7 /usr/local/var/www/promotion-v5/public/index.php(22): Core\bootstrap::runApplication()
+#8 {main}
+  thrown in /usr/local/var/www/promotion-v5/app/Models/PromotionShopModel.php on line 263" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/10 15:52:08 [error] 952#0: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  array_column() expects parameter 1 to be array, boolean given in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 27
+PHP message: PHP Warning:  array_fill_keys() expects parameter 1 to be array, null given in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 27" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/shop/list?promotion_id=1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/11 14:04:54 [error] 895#0: *49 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 167" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/11 14:10:05 [error] 895#0: *60 FastCGI sent in stderr: "PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172
+PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172
+PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172
+PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172
+PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172
+PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/11 14:10:23 [error] 895#0: *60 FastCGI sent in stderr: "PHP message: PHP Warning:  array_column(): The column key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/11 14:11:12 [error] 895#0: *60 FastCGI sent in stderr: "PHP message: PHP Warning:  array_column(): The index key should be either a string or an integer in /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php on line 172" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/11 14:26:00 [error] 895#0: *67 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'Models\DI' not found in /usr/local/var/www/promotion-v5/app/Models/PromotionLogModel.php:107
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php(175): Models\PromotionLogModel->getGoodSaleNum('1', '2')
+#1 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(73): Business\GoodsBusiness->getPromotionGoodsInfoByShopId(2)
+#2 [internal function]: Controllers\Admin\GoodsController->testAction()
+#3 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'testAction', Array)
+#4 [internal function]: Phalcon\Dispatcher->_dispatch()
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#7 /usr/local/var/www/promotion-v5/public/index.php(22): Core\bootstrap::runApplication()
+#8 {main}
+  thrown in /usr/local/var/www/promotion-v5/app/Models/PromotionLogModel.php on line 107" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/11 16:29:50 [error] 895#0: *103 FastCGI sent in stderr: "PHP message: PHP Warning:  Attempt to assign property of non-object in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 229
+PHP message: PHP Warning:  Attempt to assign property of non-object in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 230
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function save() on array in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php:233
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(80): Business\ShopBusiness->confirmJoin(1, 1)
+#1 [internal function]: Controllers\Admin\GoodsController->testAction()
+#2 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'testAction', Array)
+#3 [internal function]: Phalcon\Dispatcher->_dispatch()
+#4 [internal function]: Phalcon\Dispatcher->dispatch()
+#5 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#6 /usr/local/var/www/promotion-v5/public/index.php(22): Core\bootstrap::runApplication()
+#7 {main}
+  thrown in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 233" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/goods/test HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/12 14:55:00 [error] 1590#0: *91 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Phalcon\Mvc\Model\Resultset\Simple::save() in /usr/local/var/www/promotion-v5/app/Models/PromotionShopGoodsModel.php:94
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php(266): Models\PromotionShopGoodsModel->modify(9, Array)
+#1 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(93): Business\GoodsBusiness->updateGoodsPromotionInfo(Array)
+#2 [internal function]: Controllers\Admin\GoodsController->updateAction()
+#3 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'updateAction', Array)
+#4 [internal function]: Phalcon\Dispatcher->_dispatch()
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#7 /usr/local/var/www/promotion-v5/public/index.php(22): Core\bootstrap::runApplication()
+#8 {main}
+  thrown in /usr/local/var/www/promotion-v5" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/goods/update HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/12 14:55:34 [error] 1590#0: *91 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined method Phalcon\Mvc\Model\Resultset\Simple::save() in /usr/local/var/www/promotion-v5/app/Models/PromotionShopGoodsModel.php:94
+Stack trace:
+#0 /usr/local/var/www/promotion-v5/app/Business/GoodsBusiness.php(266): Models\PromotionShopGoodsModel->modify(9, Array)
+#1 /usr/local/var/www/promotion-v5/app/Controllers/Admin/GoodsController.php(93): Business\GoodsBusiness->updateGoodsPromotionInfo(Array)
+#2 [internal function]: Controllers\Admin\GoodsController->updateAction()
+#3 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Controllers\Admin\GoodsController), 'updateAction', Array)
+#4 [internal function]: Phalcon\Dispatcher->_dispatch()
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /usr/local/var/www/promotion-v5/app/Core/bootstrap.php(97): Phalcon\Mvc\Application->handle(NULL)
+#7 /usr/local/var/www/promotion-v5/public/index.php(22): Core\bootstrap::runApplication()
+#8 {main}
+  thrown in /usr/local/var/www/promotion-v5" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/goods/update HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/12 16:59:38 [error] 1590#0: *146 FastCGI sent in stderr: "PHP message: PHP Warning:  Illegal string offset 'msg' in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 186" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/shop/del HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/01/12 17:00:21 [error] 1590#0: *146 FastCGI sent in stderr: "PHP message: PHP Warning:  Illegal string offset 'msg' in /usr/local/var/www/promotion-v5/app/Business/ShopBusiness.php on line 186" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /admin/shop/del HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/02/05 15:57:20 [error] 1467#0: *13 FastCGI sent in stderr: "PHP message: PHP Warning:  SeasLog::info(): The second argument is not an array in /usr/local/var/www/promotion-v5/app/Core/Tools/SeasLogPlugin.php on line 96" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "POST /priv/promotion/join HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/02/05 17:22:22 [error] 1467#0: *26 FastCGI sent in stderr: "PHP message: PHP Warning:  sprintf(): Too few arguments in /usr/local/var/www/promotion-v5/app/Controllers/Admin/TestController.php on line 249
+PHP message: PHP Warning:  Redis::mget() expects parameter 1 to be array, object given in /usr/local/var/www/promotion-v5/app/Core/Tools/MyRedis.php on line 67
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /usr/local/var/www/promotion-v5/app/Core/Tools/MyRedis.php on line 81" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/test/getCacheInfo?user_id=9295872&promotion_id=23&school_id=822&shop_id=0&date=20180205&device_id=E20F9DE5-4F89-4204-808E-DACFB6AEE476&goods_id=100000000000000141 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/02/05 17:22:40 [error] 1467#0: *26 FastCGI sent in stderr: "PHP message: PHP Warning:  sprintf(): Too few arguments in /usr/local/var/www/promotion-v5/app/Controllers/Admin/TestController.php on line 249
+PHP message: PHP Warning:  Redis::mget() expects parameter 1 to be array, object given in /usr/local/var/www/promotion-v5/app/Core/Tools/MyRedis.php on line 67
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /usr/local/var/www/promotion-v5/app/Core/Tools/MyRedis.php on line 81" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/test/getCacheInfo?user_id=9295872&promotion_id=23&school_id=822&shop_id=0&date=20180205&device_id=E20F9DE5-4F89-4204-808E-DACFB6AEE476&goods_id=100000000000000141 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/02/05 17:23:43 [error] 1467#0: *26 FastCGI sent in stderr: "PHP message: PHP Warning:  Redis::mget() expects parameter 1 to be array, object given in /usr/local/var/www/promotion-v5/app/Core/Tools/MyRedis.php on line 67
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /usr/local/var/www/promotion-v5/app/Core/Tools/MyRedis.php on line 81" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/test/getCacheInfo?user_id=9295872&promotion_id=23&school_id=822&shop_id=0&date=20180205&device_id=E20F9DE5-4F89-4204-808E-DACFB6AEE476&goods_id=100000000000000141 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
+2018/02/05 17:24:29 [error] 1467#0: *26 FastCGI sent in stderr: "PHP message: PHP Warning:  Redis::mget() expects parameter 1 to be array, object given in /usr/local/var/www/promotion-v5/app/Controllers/Admin/TestController.php on line 251" while reading response header from upstream, client: 10.0.12.49, server: promotion-v5.cn, request: "GET /admin/test/getCacheInfo?user_id=9295872&promotion_id=23&school_id=822&shop_id=0&date=20180205&device_id=E20F9DE5-4F89-4204-808E-DACFB6AEE476&goods_id=100000000000000141 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9071", host: "promotion-v5.cn"
