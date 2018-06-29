@@ -8,7 +8,7 @@ define('APP_PATH', BASE_PATH . 'app' . DS);
 define('CORE_PATH', APP_PATH . 'Core' . DS);
 define('TOOLS_PATH', CORE_PATH . 'Tools' . DS);
 define('CONFIG_PATH', APP_PATH . 'Config' . DS);
-define('LOG_PATH', dirname(BASE_PATH) . DS . 'logs' . DS);
+define('LOG_PATH', BASE_PATH . DS . 'logs' . DS);
 define('VIEWS_PATH', APP_PATH . 'Views' . DS);
 define('COMPILED_PATH', BASE_PATH . 'runtime' . DS . 'compiled' . DS);
 define('PUBLIC_PATH', BASE_PATH . 'public' . DS);
