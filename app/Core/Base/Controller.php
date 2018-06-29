@@ -44,13 +44,30 @@ class Controller extends PhalconController
         $this->response->setContentType('application/json', 'UTF-8');
     }
 
+    protected function limitRequestMethod(string $method, bool $exitApp = TRUE)
+    {
+        if (strtoupper($this->request->getMethod()) == strtoupper($method)) {
+            return TRUE;
+        } else {
+            if ($exitApp) {
+                $this->notAllowedMethod();
+            }
+            return FALSE;
+        }
+    }
+
+    protected function notAllowedMethod()
+    {
+        header('HTTP/1.1 405 Not Allowed');
+        die('The specified HTTP method is not allowed for the requested resource (Request method \'' . $this->request->getMethod() . '\' not supported).');
+    }
+
     protected function saveAccessLog($response)
     {
         $post = !empty($this->request->getPost())?$this->request->getPost():$this->request->getJsonRawBody();
         SeasLogPlugin::accessLog($post, $this->request->getQuery(), $response);
     }
-
-
+    
     protected function saveErrorLog($message, $data = [])
     {
         $param = [

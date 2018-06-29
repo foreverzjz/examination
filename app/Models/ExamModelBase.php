@@ -10,16 +10,16 @@ namespace Models;
 
 use Core\Base\Model;
 
-class PtModelBase extends Model
+class ExamModelBase extends Model
 {
-    const TABLE_PRE = 'pt_';
+    const TABLE_PRE = 'exam_';
 
     /**
      * Initialize method for model.
      */
     public function initialize()
     {
-        $this->setSchema("db_promotion_v5");
+        $this->setSchema("db_examination");
     }
 
     public function findRecords($fields, $con = [], $tableName)
