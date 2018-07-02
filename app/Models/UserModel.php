@@ -12,6 +12,11 @@ class UserModel extends ExamModelBase
     use ExamUser;
     CONST CACHE_CONNECTION = 'redis';
 
+    public function initialize()
+    {
+        parent::initialize();
+    }
+
     /**
      * Returns table name mapped in the model.
      *
@@ -49,11 +54,9 @@ class UserModel extends ExamModelBase
         if(empty($username)){
             return [];
         }
-        $info = parent::findFirst("(`username`={$username} or `mp`={$username}) and delete_at is null");
-        if(empty($info)){
-            return [];
-        }
-        return $info->toArray();
+        $sql = "select * from {$this->getSource()} where (username='{$username}' or mp='{$username}') and delete_at is null";
+        $info = $this->getReadConnection()->fetchOne($sql);
+        return $info;
     }
 
     public function preventCache($userId)
@@ -91,6 +94,6 @@ class UserModel extends ExamModelBase
         }
         $cache = Di::getDefault()->get(self::CACHE_CONNECTION);
         $cacheKey = sprintf(CacheConst::LOGIN_BAN, $userId);
-        return $cache->existKey($cacheKey);
+        return $cache->existsKey($cacheKey);
     }
 }

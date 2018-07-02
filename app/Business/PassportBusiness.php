@@ -62,6 +62,8 @@ class PassportBusiness extends Business
             return false;
         }
         $mUser->clearLoginCache($loginUser['id']);
+        //获取token
+        
         Di::getDefault()->get('session')->set('loginUser', $loginUser);
         return $loginUser;
     }
