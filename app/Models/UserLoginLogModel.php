@@ -3,8 +3,10 @@
 namespace Models;
 
 use DataMeta\ExamUserLoginLog;
+use Enumerations\CacheConst;
+use Phalcon\Di;
 
-class UserLoginLog extends ExamModelBase
+class UserLoginLogModel extends ExamModelBase
 {
     use ExamUserLoginLog;
 
@@ -48,4 +50,29 @@ class UserLoginLog extends ExamModelBase
         return parent::findFirst($parameters);
     }
 
+    public function logout($uid)
+    {
+        if(empty($uid)){
+            return true;
+        }
+        $db = $this->getWriteConnection();
+        $result = $db->update($this->getSource(), ['sign_out'], [1], "uid={$uid}");
+        return $result;
+    }
+
+    public function clearLoginCache($uid)
+    {
+        if(empty($uid)){
+            return false;
+        }
+        $cache = Di::getDefault()->get(CacheConst::CACHE_CONNECTION);
+        $loginUidKey = sprintf(CacheConst::LOGIN_UID, $uid);
+        $prevLoginToken = $cache->get($loginUidKey);
+        if($prevLoginToken !== false){
+            $prevLoginTokenKey = sprintf(CacheConst::LOGIN_TOKEN, $prevLoginToken);
+            $cache->delete($prevLoginTokenKey);
+        }
+        $cache->delete($loginUidKey);
+        return true;
+    }
 }
