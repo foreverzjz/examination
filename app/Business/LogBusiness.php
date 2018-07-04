@@ -37,19 +37,20 @@ class LogBusiness extends Business
         }
 
         $mUserLoginLog = new UserLoginLogModel();
+        $token = Common::uuid_generate() . $uid;
         $data = [
             'uid'=>$uid,
-            'token'=>uuid_create() . $uid,
+            'token'=>$token,
             'type'=>$loginType,
             'description'=>'',
             'sign_out'=>0,
             'login_time'=>date('Y-m-d H:i:s'),
+            'update_time'=>date('Y-m-d H:i:s'),
             'login_ip'=>Common::getClientIP(),
             'device_id'=>$deviceId
         ];
-        $userLoginLogWrapper = new UserLoginLogWrapper($data);
-        $userLoginLogWrapper->mappingToModel($mUserLoginLog);
-        $mUserLoginLog->create();
+        $mUserLoginLog->recordLoginLog($data);
+        return $token;
     }
 
     public function setLogout($uid, $updateCache = TRUE)

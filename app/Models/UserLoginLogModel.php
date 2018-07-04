@@ -75,4 +75,10 @@ class UserLoginLogModel extends ExamModelBase
         $cache->delete($loginUidKey);
         return true;
     }
+
+    public function recordLoginLog($data)
+    {
+        $db = $this->getWriteConnection();
+        return $db->insert($this->getSource(), array_values($data), array_keys($data));
+    }
 }

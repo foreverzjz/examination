@@ -371,4 +371,17 @@ class Common
         }
     }
 
+    /*
+     *  生成uuid
+     */
+    public static function uuid_generate()
+    {
+        $chars = md5(uniqid(mt_rand(), TRUE));
+        $uuid = substr($chars, 0, 8);
+        $uuid .= substr($chars, 8, 4);
+        $uuid .= substr($chars, 12, 4);
+        $uuid .= substr($chars, 16, 4);
+        $uuid .= substr($chars, 20, 12);
+        return strtoupper($uuid);
+    }
 }
