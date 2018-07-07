@@ -1,0 +1,79 @@
+html, body {
+  height: 100%; }
+
+p, ul, form, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a, p, div, span {
+  font-size: 0.85rem; }
+
+h1 {
+  font-size: 1.5rem; }
+
+h2 {
+  font-size: 1rem; }
+
+h3 {
+  font-size: 1rem; }
+
+h4 {
+  font-size: 1rem;
+  font-weight: 100; }
+
+.bg-blue-dark {
+  background-color: #273645; }
+
+.btn, .input-group-text, .form-control, .dropdown-item, .custom-select {
+  font-size: 0.85rem;
+  font-weight: 400; }
+
+body {
+  height: auto;
+  background: linear-gradient(150deg, #4d6072, #2f4050);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.95); }
+
+.sign-box {
+  width: 750px;
+  margin: 10% auto 0; }
+
+.sign-box .logo {
+  float: none;
+  width: auto;
+  padding: 0;
+  background: 0 0; }
+
+.sign-box .sign-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; }
+
+.sign-box .btn {
+  margin-top: 15px; }
+
+.sign-box form {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+  -webkit-box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+  box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 30px; }
+
+.sign-footer {
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+  padding-top: 15px; }
+
+/*# sourceMappingURL=sign.css.map */

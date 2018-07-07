@@ -18,11 +18,28 @@ class Business
 {
     protected $Di;
     protected $config;
-    public $errorMessage;
+    protected $redis;
+    protected $session;
+    protected $cookies;
 
     public function __construct()
     {
         $this->Di = Di::getDefault();
         $this->config = $this->Di->get('config');
+    }
+
+    public function getRedis()
+    {
+        $this->redis = $this->Di->get('redis');
+    }
+
+    public function getSession()
+    {
+        $this->session = $this->Di->get('session');
+    }
+
+    public function getCookies()
+    {
+        $this->cookies = $this->Di->get('cookies');
     }
 }

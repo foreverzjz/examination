@@ -20,7 +20,7 @@ use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Mvc\Model\Metadata\Memory as MetaData;
 use Phalcon\Mvc\Model\MetaData\Apc as ApcMetaData;
 use Phalcon\Mvc\Model\MetaData\Strategy\Annotations as StrategyAnnotations;
-use Phalcon\Session\Adapter\Files as SessionAdapter;
+use Phalcon\Session\Adapter\Redis as SessionAdapter;
 use Phalcon\Flash\Session as FlashSession;
 use Phalcon\Events\Manager as EventsManager;
 use Phalcon\Mvc\Model\Manager;
@@ -267,8 +267,8 @@ class ApplicationFactory extends FactoryDefault
         $router->add(
             "/",
             [
-                "namespace" => "Controllers",
-                "controller" => 'index',
+                "namespace" => "\\Controllers\\Admin",
+                "controller" => 'Manager',
                 "action" => 'index',
             ]
         );
@@ -358,9 +358,10 @@ class ApplicationFactory extends FactoryDefault
     /**
      * Start the session the first time some component request the session service
      */
-    protected function initSession()
+    protected function initSharedSession()
     {
-        $session = new SessionAdapter();
+        $config = $this->get('config')->get('redisSessionAdapter')->toArray();
+        $session = new SessionAdapter($config);
         $session->start();
         return $session;
     }

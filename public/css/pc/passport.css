@@ -1,0 +1,60 @@
+.page-wrap-min {
+  width: 980px;
+  margin: 0 auto; }
+
+.ph-tel {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-style: initial; }
+
+.reg-box {
+  width: 760px;
+  margin: 50px auto 80px auto; }
+  .reg-box .title {
+    padding: 25px;
+    background: #2ba3dd;
+    color: white; }
+    .reg-box .title p {
+      float: left;
+      width: 10%;
+      text-align: center;
+      padding-top: 30px; }
+    .reg-box .title span {
+      display: block; }
+    .reg-box .title .dis {
+      opacity: 0.6; }
+    .reg-box .title .step {
+      width: 26%;
+      text-align: center;
+      padding-top: 0; }
+    .reg-box .title .icon {
+      display: inline-block;
+      border: 5px white solid;
+      width: 70px;
+      height: 70px;
+      line-height: 60px;
+      border-radius: 45px;
+      font-size: 32px; }
+  .reg-box .body {
+    background-color: white; }
+    .reg-box .body .content {
+      width: 460px;
+      margin: 0 auto; }
+
+.sign-box {
+  padding: 40px 0; }
+  .sign-box .body {
+    width: 860px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: white; }
+    .sign-box .body .sign {
+      width: 300px;
+      height: 450px;
+      border-left: 1px #eee solid;
+      padding: 35px; }
+      .sign-box .body .sign h2 {
+        font-size: 1.3rem; }
+
+/*# sourceMappingURL=passport.css.map */

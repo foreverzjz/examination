@@ -157,8 +157,13 @@ class Controller extends PhalconController
         }
         $data = $dispatcher->getReturnedValue();
         if ($this->_isJsonResponse) {
-            $this->response->setJsonContent($data);
-            $this->response->send();
+            if ($data === false) {
+                $this->response->setJsonContent(self::responseError());
+            } else {
+                $this->response->setJsonContent(self::responseData($data));
+                $this->response->send();
+                exit();
+            }
         } else {
             //输出公共变量到volt
         }

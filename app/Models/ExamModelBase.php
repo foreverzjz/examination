@@ -9,6 +9,7 @@
 namespace Models;
 
 use Core\Base\Model;
+use Phalcon\Db;
 
 class ExamModelBase extends Model
 {
@@ -172,5 +173,25 @@ class ExamModelBase extends Model
                 }
                 break;
         }
+    }
+
+    public function fetchOneRecord($con="", $fields="*")
+    {
+        if(empty($con)){
+            return [];
+        }
+        $db = $this->getReadConnection();
+        $sql = "select {$fields} from ".$this->getSource()." where {$con}";
+        return $db->fetchOne($sql, \PDO::FETCH_ASSOC);
+    }
+
+    public function fetchRecords($con="", $fields="*")
+    {
+        if(empty($con)){
+            return [];
+        }
+        $db = $this->getReadConnection();
+        $sql = "select {$fields} from ".$this->getSource()." where {$con}";
+        return $db->fetchAll($sql, \PDO::FETCH_ASSOC);
     }
 }

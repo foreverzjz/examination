@@ -1,0 +1,36 @@
+html, body {
+  height: 100%; }
+
+p, ul, form, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a, p, div, span {
+  font-size: 0.85rem; }
+
+h1 {
+  font-size: 1.5rem; }
+
+h2 {
+  font-size: 1rem; }
+
+h3 {
+  font-size: 1rem; }
+
+h4 {
+  font-size: 1rem;
+  font-weight: 100; }
+
+.bg-blue-dark {
+  background-color: #273645; }
+
+.btn, .input-group-text, .form-control, .dropdown-item, .custom-select {
+  font-size: 0.85rem;
+  font-weight: 400; }
+
+/*# sourceMappingURL=common.css.map */

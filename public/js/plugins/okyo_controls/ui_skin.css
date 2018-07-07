@@ -1,0 +1,19 @@
+/*OKYO Num Input*/
+.uic_numbox{ position:relative; display:inline-block; *display:inline;}
+.uic_numbox input{ padding-right:20px; text-align: center;}
+.uic_numbox .uic_btn_up,.uic_numbox .uic_btn_down{ position: absolute; display: block; padding: 0; margin: 0; width:20px; height:19px; line-height: 18px; text-align: center; border-left: 1px #ccc solid;}
+.uic_numbox .uic_btn_up{ right:1px; top:0px; border-bottom: 1px #ccc solid;}
+.uic_numbox .uic_btn_down{ right:1px; top:19px; line-height: 16px;}
+.uic_numbox .uic_btn_event_over{ background-position:center -17px; color: #2ba3dd;}
+.uic_numbox .uic_btn_event_down{ background-position:center -32px; color: #2ba3dd;}
+.uic_numbox .uic_btn_disabled{ color: #ccc;}
+
+/*OKYO Auto Complete*/
+.uic_sibox{position:relative; display:inline-block; *display:inline; padding:0; margin:0;}
+.uic_sibox .btnSelect{position: absolute;right: 2px;top:2px;background: transparent url(images/select_button.png) no-repeat top left;
+                      display: -moz-inline-block;display: inline-block; height: 23px; width: 24px; text-decoration: none;
+                      font-size: 0pt;z-index: 2;outline: 0;}
+.uic_sibox .btnSelect:hover{ background-position:0 -25px; }
+.uic_sibox .options{ position: absolute; display: none; left:0px; top:0px; background: #fff; border: 1px #d9e4e6 solid; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding-bottom: 5px; }
+.uic_sibox .option{ display: block; margin:2px 0; font-size: 12px; line-height: 26px; padding: 0 8px; height: 26px; overflow: hidden; color: #666; text-decoration:none; } 
+.uic_sibox .option:hover{ background:#077bce; color: #fff;}
